@@ -5,6 +5,14 @@
 
 */
 
+
+
+/* add css */
+.pointColor100 { color:#e1e1e1;}
+
+
+
+
 /* common */
 body { background-color:#fcffe7; border-top:5px solid #005596; font-family: "돋움"; font-size:.73em;}
 .clear { clear:both;}
