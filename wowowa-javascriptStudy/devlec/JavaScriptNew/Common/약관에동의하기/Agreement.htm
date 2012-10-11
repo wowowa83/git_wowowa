@@ -1,0 +1,30 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>이용약관</title>
+    <script language="javascript" type="text/javascript">
+    function CheckForm()
+    {
+        var ok = document.getElementById("OK");
+        if (ok.checked == true)
+        {
+            location.href = "Register.htm"; // 이동
+        }
+        else
+        {
+            window.alert("약관에 동의하셔야합니다.");
+            return false;
+        }     
+    }
+    </script>
+</head>
+<body>
+<textarea style="width: 400px;height: 61px">
+우리 쇼핑몰은 어쩌구 저쩌구...
+약관 내용 나열...
+</textarea>
+<form id="MyForm">
+<input type="checkbox" id="OK" /> 약관에 동의하시겠습니까?
+<input type="button" value="회원가입" onclick="CheckForm();" />
+</form>
+</body>
+</html>
