@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>제목 없음</title>
+    <script language="JavaScript"> 
+	function setCookie( name, value, expiredays ) 
+	{ 
+		var todayDate = new Date(); 
+		todayDate.setDate( todayDate.getDate() + expiredays ); 
+		document.cookie = name + "=" + escape( value ) + "; path=/; expires=" + todayDate.toGMTString() + ";" 
+	} 
+	function closeWin() 
+	{ 
+		if ( document.lehit.event.checked )
+		{
+			setCookie("memo", "no" , 1); // 1일동안 쿠키를 보존합니다.
+		}	 
+	}
+    </script>    
+</head>
+<body onunload="closeWin();">
+
+팝업 공지사항<hr />
+
+    <form name="lehit">
+    <input type="checkbox" name="event">[하루동안 이 창을 열지않음]
+    <input type="button" value="닫기" onclick="self.close()">
+    </form>
+
+</body>
+</html>

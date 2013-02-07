@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>워터마크 기능 구현</title>
+    <script language="javascript" type="text/javascript">
+    // 초기값인 상태라면 텍스트박스 값 지우기 : 워터마크 지우기
+    function clearField(field)
+    {
+        if (field.value == field.defaultValue) 
+        {
+            field.value = '';
+        }
+    }
+    // 아무값도 입력되지 않았다면, 초기값으로 다시 지정 : 아이디/비밀번호
+    function checkField(field)
+    {
+        if (field.value == '')
+        {
+            field.value = field.defaultValue;  
+        }
+    }
+    </script>
+</head>
+<body>
+아이디 : <input type="text" value="아이디" 
+    onfocus="clearField(this);" onblur="checkField(this);" /><br />
+비밀번호 : <input type="text" value="비밀번호" 
+    onfocus="clearField(this);" onblur="checkField(this);" /><br />
+<input type="submit" value="로그인" />
+</body>
+</html>

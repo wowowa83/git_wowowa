@@ -1,0 +1,31 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>체크박스 전체선택 전체해제</title>
+    <script language="javascript" type="text/javascript">
+    var checkflag = "false";//false이면 전체선택, true이면 전체해제.
+    function check(field) {
+	    if (checkflag == "false") {
+		    for (i = 0; i < field.length; i++) {
+			    field[i].checked = true;//모든 체크박스를 체크한다.
+		    }
+		    checkflag = "true";
+		    return "전체 해제";//버튼객체의 value속성으로 반환(this.value.list로 넘겨져왔기때문)
+	    }
+	    else {
+		    for (i = 0; i < field.length; i++) {
+			    field[i].checked = false;//모든 체크박스를 해제한다.
+		    }
+		    checkflag = "false";
+		    return "전체 선택"; //버튼객체의 value속성으로 반환(this.value로 넘겨져왔기때문)
+	    }
+    }//end function    
+    </script>
+</head>
+<body>
+<form name="MyForm" action="" method="post">
+<input type="checkbox" name="list" id="list" value="1" />C#<br />
+<input type="checkbox" name="list" id="list" value="2" />Java<br />
+<input type="button" value="전체 선택" onclick="this.value=check(this.form.list);" />
+</form>
+</body>
+</html>
