@@ -1,0 +1,7 @@
+INDEX VERSION 1.122+/Users/leejaeho/Documents/git_wowowa/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+707001132.index
+3966222072.index
+759504115.index
+772247799.index
+2189130794.index
+3444862344.index
